@@ -1,18 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>testando git e gihub</title>
 </head>
+
 <body>
-    <h1>Hello World</h1>
-    <p>
-        aprendendo principais açoes e configuraçoes do git e git hub
-    </p>
-    <p>
-        Adicionando informaçoes para atualizar no github pelo git 
-    </p>
-    
+    <Header>
+        <h1>
+            Aprendendo a usar o Git bash
+        </h1>
+    </Header>
+
+    <div>
+
+        <section>
+
+            <h2>
+                Comandos no git bash
+            </h2>
+
+            <h3>
+                branch
+            </h3>
+            <p>
+                Uma branch é como uma linha do tempo paralela do seu projeto. Quando você cria uma branch, está criando
+                uma nova linha de desenvolvimento que começa a partir de um ponto específico na história do projeto, mas
+                que pode seguir seu próprio caminho de forma independente da linha principal, sem alterar a mesma.
+            </p>
+
+            <h3>
+                ls
+            </h3>
+            <p>
+                Lista todos os arquivos e diretórios no diretório atual.
+            </p>
+
+            <h3>
+                ls -1
+            </h3>
+            <p>
+                Mostra uma lista detalhada com mais informações.
+            </p>
+
+            <h3>
+                ls -a
+            </h3>
+            <p>
+                Lista todos os arquivos incluindo arquivos ocultos.
+            </p>
+
+            <h3>
+                ls -1a
+            </h3>
+            <p>
+                Combina os dois comandos -1 e -a mostrando uma lista
+                detallhada com todos os arquivos ocultos.
+            </p>
+
+            <h3>
+                git init
+            </h3>
+            <p>
+                Inicializa um novo repositório dentro do diretório em que você deu o
+                comando, significa que foi criado uma pasta va oculta e vazia ".git".
+            </p>
+
+            <h3>
+                git status
+            </h3>
+            <p>
+                Mostrar informações importantes do que esta acontecendo em seu repositório do git.
+            </p>
+
+            <h3>
+                git -add.
+            </h3>
+            <p>
+                Adicionar mudanças nos arquivos na area de preparação. Significa que estamos dizendo ao git que
+                desejamos incluir essas novas alterações no proximo commit.
+            </p>
+
+            <h3>
+                git commit -m
+            </h3>
+            <p>
+                É utilizado para salvar as atualizações que você adicionou ao repositório com o comando git add. E ao
+                usar git commit -m "nome da atualização", você fornece uma descrição para essas atualizações(um nome),
+                que será registrada no histórico da branch. A branch representa a linha do tempo do projeto,mostrando
+                todos os passos da vida da quele projeto.
+            </p>
+
+            <h3>
+                git branch -M main
+            </h3>
+            <p>
+                Renomear uma branch para o nome main. o M significa renomar/ alterar o nome. Se uma branch com o nome de
+                destino (neste caso, main) já existir, o -M força a substituição dessa branch existente. Isso é útil se
+                você deseja garantir que a branch seja renomeada independentemente de qualquer conflito de nomes.
+            </p>
+
+            <h3>
+                git push
+            </h3>
+            <p>
+                É usado para enviar as alterações locais feitas no seu repositório Git para um repositório remoto
+                (github). Quando você faz um git push, você está atualizando o repositório remoto com os commits que
+                você fez localmente.
+            </p>
+    </div>
+
+    </section>
+
 </body>
+
 </html>
