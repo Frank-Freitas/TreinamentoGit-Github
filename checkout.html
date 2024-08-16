@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal de Git Checkout</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            git Checkout
+        </h1>
+    </header>
+
+    <!-- Botão para abrir o modal -->
+    <button id="openModalBtn">git checkout entre commits</button>
+
+    <!-- Estrutura do modal -->
+    <div id="myModal" style="display:none;">
+        <div>
+            <!-- Botão para fechar o modal -->
+            <button id="closeModalBtn">Fechar</button>
+            <h3>git checkout entre commits</h3>
+            <p>
+                O git checkout pode ser combinado com o HEAD para navegar entre commits, o comando
+                git checkout HEAD coloca voce no commit mais recente do brancj atual, não ha mudanças percepitivas se
+                voce ja estiver no estado mais recente, mas pode ser util se voce tiver feito alteraçoes não commitadas
+                e quiser restaurar o diretorio de trabalho ao ultimo commmit.
+            </p>
+
+            <h3>
+                Voltar para um Commit Anterior Relativo:
+            </h3>
+            <p>
+                Com o comando <span>git checkout HEAD~N </span>, você retorna ao estado do repositório de N commits
+                atrás, onde N é o número de commits que você deseja voltar. <br>
+                <span>git checkout HEAD~1</span> Volta um commit atrás. <br>
+                <span>git checkout HEAD~2</span> Volta dois commits atrás, e assim por diante.
+            </p>
+
+            <h3>
+                checkout para um commit especifico
+            </h3>
+            <p>
+                Se colocarmos git checkout "Codigo especifico de um commit" voltaremos exatamente para esse commit.
+                <span>Por ecxemplo </span>: git checkout 6dcb09bcca3eabcd123456789abcde123456789a
+            </p>
+
+        </div>
+    </div>
+
+
+    <header>
+        <p><a href="index.html">Voltar para pagina principal</a></p>
+    </header>
+
+    <script>
+        // Obtém o modal
+        var modal = document.getElementById("myModal");
+
+        // Obtém o botão que abre o modal
+        var btn = document.getElementById("openModalBtn");
+
+        // Obtém o botão que fecha o modal
+        var closeBtn = document.getElementById("closeModalBtn");
+
+        // Quando o usuário clicar no botão, abre o modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // Quando o usuário clicar no botão de fechar, fecha o modal
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
