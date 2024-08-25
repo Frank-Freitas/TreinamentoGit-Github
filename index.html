@@ -33,7 +33,7 @@
             <p>
                 entrar no repoistorio do github , pegar chave ssh do repositório.
                 Apos isto, entrar no git bash dentro da pasta de seu projeto e, usar o comando
-                <span>git remote add origin</span> e em siguida o link do seu reposiório do projeto no github.
+                <strong>git remote add origin</strong> e em siguida o link do seu reposiório do projeto no github.
                 ficando assim: git remote add origin git@github.com:seuusuario/seurepositorio.git
 
             </p>
@@ -196,6 +196,28 @@
             </p>
 
     </div>
+
+    <h3>
+        Deletando Ultimo commit sem deletar modificações nos arquivos.
+    </h3>
+    <p>
+        <u>Sempre usando o git status para ver o status atual.</u><br>
+       <strong>Localmente:</strong>
+O comando git reset --soft HEAD~1 move o ponteiro HEAD para HEAD~1, ou seja, o penúltimo commit agora se torna o commit "atual" no seu repositório local.
+O commit que era o HEAD mais recente é "desfeito" localmente e suas mudanças são colocadas na área de stage.
+No histórico local: Agora, HEAD~1 se torna HEAD, e o commit que era HEAD ainda existe, mas suas alterações estão prontas para serem re-commitadas, modificadas ou removidas.
+
+<h4>
+    No Repositório Remoto:
+</h4>
+<strong>Nada muda imediatamente:</strong> O repositório remoto ainda tem HEAD e HEAD~1 como estavam antes do reset local. O commit que você "desfez" localmente ainda está lá como o commit mais recente no remoto.
+Após git push --force (se você fizer isso):
+Se você decidir executar git push --force após o git reset --soft HEAD~1, você estará sobrescrevendo o histórico no remoto com o histórico local atualizado.
+
+<strong>Resultado no remoto:</strong> O commit que era o HEAD~1 agora se tornará o HEAD no remoto, e o commit original do HEAD será removido do histórico remoto (ele será perdido, a menos que esteja referenciado em outro lugar).
+
+
+    </p>
 
     </section>
 
