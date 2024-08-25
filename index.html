@@ -283,7 +283,102 @@
             </p>
         </section>
         
+        <section>
+            <h2>
+                Git Reset --hard
+            </h2>
+            <p>
+                O comando <code><strong>git reset --hard</strong></code> é usado para reverter o estado do seu repositório Git a um ponto anterior, descartando todas as mudanças feitas após o commit especificado. 
+                <br><br>
+                Quando você usa <code>git reset --hard</code>, qualquer alteração não salva (não commitada) será perdida, e o repositório voltará exatamente ao estado do commit escolhido. 
+                <br><br>
+                Por exemplo, se você quiser voltar o projeto ao estado do commit anterior, pode usar:
+                <br><code><strong>git reset --hard HEAD~1</strong></code>
+                <br>Isso faz com que o diretório de trabalho e a área de staging sejam revertidos para aquele estado, removendo todas as alterações feitas desde então.
+            </p>
+        </section>
 
+        <section>
+            <h2>
+                Sobrescrever um Histórico no GitHub
+            </h2>
+            <p>
+                Para sobrescrever o histórico de commits no GitHub, você pode utilizar o comando <code><strong>git push --force</strong></code>. Esse comando força o Git a atualizar o repositório remoto com a versão atual do seu repositório local, mesmo que o histórico de commits seja diferente. Isso pode ser útil em situações em que você alterou o histórico localmente e precisa refletir essas mudanças no repositório remoto.
+            </p>
+            <p>
+                No entanto, é importante usar <strong>cautela</strong> ao utilizar o <code>git push --force</code>, pois ele pode sobrescrever o trabalho de outros colaboradores, eliminando commits que já foram enviados ao repositório remoto. 
+                <br><br>
+                Por exemplo, ao usar <code>git reset --hard</code> em um commit anterior para modificar a linha do tempo do projeto e depois forçar o push com <code>git push --force</code>, você estará reescrevendo o histórico remoto com as alterações do seu repositório local.
+            </p>
+            <h3>Exemplo Prático</h3>
+            <p>
+                Suponha que você tenha feito commits que deseja remover do histórico. Você pode voltar ao estado de um commit específico com:
+                <br><code><strong>git reset --hard [commit]</strong></code>
+                <br>Em seguida, use:
+                <br><code><strong>git push --force</strong></code>
+                <br>para sobrescrever o histórico remoto com as mudanças locais.
+            </p>
+        </section>
+
+        <section>
+            <h2>
+                O comando git push -f 
+            </h2>
+            <p>
+                O comando é utilizado para forçar o envio de commits do repositório local para o repositório remoto, mesmo que isso envolva sobrescrever o histórico remoto existente. Esse comando é geralmente usado em situações onde o histórico local foi modificado, como após um git reset --hard, ou outras operações que reescrevem o histórico de commits.
+            </p>
+            <p>
+               <strong>Como usar:</strong> Quando você usa git push -f, o Git não apenas adiciona novos commits ao repositório remoto, mas também reescreve o histórico, eliminando commits no repositório remoto que não estão mais presentes no seu repositório local. <br>
+Isso pode ser útil para corrigir um erro cometido em commits anteriores ou para manter o histórico de commits limpo e organizado.
+            </p>
+        </section>
+
+        <section>
+            <h2>
+                Apontar o Projeto para Outro Repositório Remoto
+            </h2>
+            <p>
+                Às vezes, pode ser necessário mudar o repositório remoto para o qual o seu projeto Git está apontando. Isso pode acontecer se você tiver mudado o repositório no GitHub, ou se estiver movendo o projeto para um novo servidor. Para isso, o comando <code>git remote set-url</code> é utilizado.
+            </p>
+            <h3>Entendendo o Comando <code>git remote set-url</code></h3>
+            <p>
+                O comando <code>git remote set-url</code> permite que você altere o URL de um repositório remoto associado ao seu projeto. Em outras palavras, ele aponta o repositório local para um novo repositório remoto, mantendo o nome do remoto (como <code>origin</code>), mas mudando o destino.
+            </p>
+        
+            <h3>Como Usar:</h3>
+            <p>
+                Para apontar o projeto para um novo repositório remoto, você pode usar o seguinte comando:
+            </p>
+            <pre><code>git remote set-url origin NOVO_URL</code></pre>
+            <p>
+                Aqui, <code>origin</code> é o nome padrão do repositório remoto, e <code>NOVO_URL</code> é o novo URL do repositório para o qual você deseja apontar o seu projeto. Por exemplo, se você mudou o repositório para um novo endereço no GitHub, o comando poderia ser:
+            </p>
+            <pre><code>git remote set-url origin https://github.com/usuario/novo-repositorio.git</code></pre>
+            
+            <h3>Verificando a Alteração</h3>
+            <p>
+                Após alterar o URL do remoto, é uma boa prática verificar se a mudança foi aplicada corretamente. Para isso, você pode usar o comando:
+            </p>
+            <pre><code>git remote -v</code></pre>
+            <p>
+                Este comando exibirá a lista de URLs associadas ao seu repositório, permitindo que você confirme que o repositório está apontando para o local correto.
+            </p>
+            
+            <h3>Quando Usar</h3>
+            <p>
+                Esse comando é útil em diversas situações, como:
+            </p>
+            <ul>
+                <li>Se você renomeou ou transferiu o repositório no GitHub.</li>
+                <li>Se você clonou o projeto de outro lugar e deseja vinculá-lo ao seu próprio repositório.</li>
+                <li>Se a URL do servidor Git foi alterada.</li>
+            </ul>
+        
+            <p>
+                Ao usar <code>git remote set-url</code>, você mantém todas as suas referências e histórico de commits, mas agora eles serão enviados para o novo repositório remoto.
+            </p>
+        </section>
+        
     </div>
 </body>
 
