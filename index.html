@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testando Git e GitHub</title>
+    <title>Treinamento Git e GitHub</title>
 </head>
 
 <body>
@@ -30,8 +30,8 @@
                 <li>
                     Para conferir as configurações feitas utilize o comando <strong>git config --list</strong>
                 </li>
-            </li>
-            </p>
+                </li>
+                </p>
 
         </section>
         <section>
@@ -39,22 +39,27 @@
                 Conectando sua maquina ao seu github com autenticação SSH
             </h2>
             <p>
-               A ideia básica é cadastrar previamente quais computadores podem acessar o Github em seu nome. Outros computadores não conseguem acessar
+                A ideia básica é cadastrar previamente quais computadores podem acessar o Github em seu nome. Outros
+                computadores não conseguem acessar
             </p>
             <h3>
                 Gerar uma chave SSH em seu computador
             </h3>
             <p>
-               use o comando <strong>ssh-keygen -t ed25519 -C "your_email@example.com"</strong>, e coloque seu email de cadastro no github no lugar do email de exemplo.
+                use o comando <strong>ssh-keygen -t ed25519 -C "your_email@example.com"</strong>, e coloque seu email de
+                cadastro no github no lugar do email de exemplo.
             </p>
             <p>
-                Apos isso o git vai perguntar onde você quer guardar a sua chave de acesso, e vai lhe sugerir guardar em sua pasta de usuario do sistema, caso queria, basta apertar enter 
+                Apos isso o git vai perguntar onde você quer guardar a sua chave de acesso, e vai lhe sugerir guardar em
+                sua pasta de usuario do sistema, caso queria, basta apertar enter
             </p>
             <p>
-                Em seguida vai ser perguntado se voce gostaria de digitar uma senha, para sempre que você for interagir com o git, usala. Caso não queira, aperte enter.
+                Em seguida vai ser perguntado se voce gostaria de digitar uma senha, para sempre que você for interagir
+                com o git, usala. Caso não queira, aperte enter.
             </p>
             <p>
-                apos os passos passados apertando somente enter, va ate a sua pasta de usuario que esta mostrando na tela do git e pegue sua chave de acesso.
+                apos os passos passados apertando somente enter, va ate a sua pasta de usuario que esta mostrando na
+                tela do git e pegue sua chave de acesso.
             </p>
             <p>
                 ao chegar ate a pasta .ssh, e entrar nela, clique no arquivo publico e copie o codigo.
@@ -66,11 +71,16 @@
                 Em seu github, va em menu, e nas configurações"settings".
             </p>
             <p>
-                No canto inferior esquerdo, clique na opção SSH and GPG Keys, depois clique em new SSH Keys. No titulo, você pode colocar o nome da maquina que vovê estiver usando, "computador do escritorio" por exemplo, em seguida cole o codigo da chave na aba key e clique em adicionar a chave.
+                No canto inferior esquerdo, clique na opção SSH and GPG Keys, depois clique em new SSH Keys. No titulo,
+                você pode colocar o nome da maquina que vovê estiver usando, "computador do escritorio" por exemplo, em
+                seguida cole o codigo da chave na aba key e clique em adicionar a chave.
             </p>
             <p>
                 Agora seu computador esta autorizado a salvar coisas em seu github com o seu nome.
             </p>
+
+            <p>para mais informações sobre essas e outras configurações, acesse o site do github e veja </p>
+            <a href="https://docs.github.com/pt/authentication/connecting-to-github-with-ssh" target="_blank">Github</a>
         </section>
 
         <section>
