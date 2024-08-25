@@ -10,23 +10,70 @@
 <body>
     <header>
         <h1>
-            Aprendendo a usar o Git Bash
+            Aprendendo sobre Git e Github
         </h1>
     </header>
 
     <div>
         <section>
             <h2>
-                Conectando o repositório local com o remoto
+                Configurando sua identificação no Git
             </h2>
-
-            <h3>
-                Gerar uma nova chave SSH
-            </h3>
             <p>
-                <!-- Criar algo aqui depois -->
+            <ul>
+                <li>
+                    com o codigo <strong>git config --global user.name "SEU NOME"</strong> voce adiciona seu nome ao git
+                </li>
+                <li>
+                    com o codigo <strong>git config --global user.email "SEU EMAIL DE CADASTRO NO GITHUB"</strong>
+                </li>
+                <li>
+                    Para conferir as configurações feitas utilize o comando <strong>git config --list</strong>
+                </li>
+            </li>
             </p>
 
+        </section>
+        <section>
+            <h2>
+                Conectando sua maquina ao seu github com autenticação SSH
+            </h2>
+            <p>
+               A ideia básica é cadastrar previamente quais computadores podem acessar o Github em seu nome. Outros computadores não conseguem acessar
+            </p>
+            <h3>
+                Gerar uma chave SSH em seu computador
+            </h3>
+            <p>
+               use o comando <strong>ssh-keygen -t ed25519 -C "your_email@example.com"</strong>, e coloque seu email de cadastro no github no lugar do email de exemplo.
+            </p>
+            <p>
+                Apos isso o git vai perguntar onde você quer guardar a sua chave de acesso, e vai lhe sugerir guardar em sua pasta de usuario do sistema, caso queria, basta apertar enter 
+            </p>
+            <p>
+                Em seguida vai ser perguntado se voce gostaria de digitar uma senha, para sempre que você for interagir com o git, usala. Caso não queira, aperte enter.
+            </p>
+            <p>
+                apos os passos passados apertando somente enter, va ate a sua pasta de usuario que esta mostrando na tela do git e pegue sua chave de acesso.
+            </p>
+            <p>
+                ao chegar ate a pasta .ssh, e entrar nela, clique no arquivo publico e copie o codigo.
+            </p>
+            <h3>
+                configurando a chave gerada no git, em seu github
+            </h3>
+            <p>
+                Em seu github, va em menu, e nas configurações"settings".
+            </p>
+            <p>
+                No canto inferior esquerdo, clique na opção SSH and GPG Keys, depois clique em new SSH Keys. No titulo, você pode colocar o nome da maquina que vovê estiver usando, "computador do escritorio" por exemplo, em seguida cole o codigo da chave na aba key e clique em adicionar a chave.
+            </p>
+            <p>
+                Agora seu computador esta autorizado a salvar coisas em seu github com o seu nome.
+            </p>
+        </section>
+
+        <section>
             <h2>
                 Salvar a primeira versão de um projeto
             </h2>
@@ -249,21 +296,30 @@
                 Resolver push rejeitado por histórico.
             </h2>
             <p>
-                Se o repositório local estiver atrasado em relação ao remoto, o <code>git push</code> normalmente falhará. Isso acontece porque o Git detecta que o repositório remoto tem commits que não estão no seu repositório local. O Git faz isso para evitar sobrescrever mudanças feitas por outras pessoas.
+                Se o repositório local estiver atrasado em relação ao remoto, o <code>git push</code> normalmente
+                falhará. Isso acontece porque o Git detecta que o repositório remoto tem commits que não estão no seu
+                repositório local. O Git faz isso para evitar sobrescrever mudanças feitas por outras pessoas.
             </p>
             <p>
-                Para resolver esse problema, você deve primeiro atualizar seu repositório local com as alterações do remoto usando <code><strong>git pull</strong></code>. Isso trará os commits do remoto para o seu repositório local. Se o comando <code>git pull</code> for executado com sucesso e não houver conflitos, você poderá fazer o <code>git push</code> normalmente.
+                Para resolver esse problema, você deve primeiro atualizar seu repositório local com as alterações do
+                remoto usando <code><strong>git pull</strong></code>. Isso trará os commits do remoto para o seu
+                repositório local. Se o comando <code>git pull</code> for executado com sucesso e não houver conflitos,
+                você poderá fazer o <code>git push</code> normalmente.
             </p>
             <p>
-                Se houver conflitos durante o <code>git pull</code>, você precisará resolvê-los antes de conseguir fazer o <code>git push</code>.
+                Se houver conflitos durante o <code>git pull</code>, você precisará resolvê-los antes de conseguir fazer
+                o <code>git push</code>.
             </p>
             <p>
-                Após o <code>git pull</code>, se for necessário fazer um merge, o editor padrão (como o <strong>VIM</strong>) pode abrir para você inserir uma mensagem de commit para o merge. Aqui está como você pode usar o VIM:
+                Após o <code>git pull</code>, se for necessário fazer um merge, o editor padrão (como o
+                <strong>VIM</strong>) pode abrir para você inserir uma mensagem de commit para o merge. Aqui está como
+                você pode usar o VIM:
             </p>
             <h3>Como usar o VIM para inserir uma mensagem de commit:</h3>
             <ol>
                 <li>
-                    Quando o VIM abrir, você estará no modo de comando. Para começar a editar, pressione <code>i</code> para entrar no modo de inserção.
+                    Quando o VIM abrir, você estará no modo de comando. Para começar a editar, pressione <code>i</code>
+                    para entrar no modo de inserção.
                 </li>
                 <li>
                     Digite a mensagem de commit. Normalmente, o Git já sugere uma mensagem de commit para merges.
@@ -272,29 +328,34 @@
                     Após inserir sua mensagem, pressione <code>Esc</code> para voltar ao modo de comando.
                 </li>
                 <li>
-                    Para salvar e sair, digite <code>:wq</code> e pressione <code>Enter</code>. Isso escreve a mensagem e sai do VIM.
+                    Para salvar e sair, digite <code>:wq</code> e pressione <code>Enter</code>. Isso escreve a mensagem
+                    e sai do VIM.
                 </li>
                 <li>
                     Se você quiser sair sem salvar, pressione <code>:q!</code> e depois <code>Enter</code>.
                 </li>
             </ol>
             <p>
-                Com a mensagem de commit salva, o Git continuará o processo de merge e você poderá fazer o <code>git push</code> para atualizar o repositório remoto com suas mudanças.
+                Com a mensagem de commit salva, o Git continuará o processo de merge e você poderá fazer o
+                <code>git push</code> para atualizar o repositório remoto com suas mudanças.
             </p>
         </section>
-        
+
         <section>
             <h2>
                 Git Reset --hard
             </h2>
             <p>
-                O comando <code><strong>git reset --hard</strong></code> é usado para reverter o estado do seu repositório Git a um ponto anterior, descartando todas as mudanças feitas após o commit especificado. 
+                O comando <code><strong>git reset --hard</strong></code> é usado para reverter o estado do seu
+                repositório Git a um ponto anterior, descartando todas as mudanças feitas após o commit especificado.
                 <br><br>
-                Quando você usa <code>git reset --hard</code>, qualquer alteração não salva (não commitada) será perdida, e o repositório voltará exatamente ao estado do commit escolhido. 
+                Quando você usa <code>git reset --hard</code>, qualquer alteração não salva (não commitada) será
+                perdida, e o repositório voltará exatamente ao estado do commit escolhido.
                 <br><br>
                 Por exemplo, se você quiser voltar o projeto ao estado do commit anterior, pode usar:
                 <br><code><strong>git reset --hard HEAD~1</strong></code>
-                <br>Isso faz com que o diretório de trabalho e a área de staging sejam revertidos para aquele estado, removendo todas as alterações feitas desde então.
+                <br>Isso faz com que o diretório de trabalho e a área de staging sejam revertidos para aquele estado,
+                removendo todas as alterações feitas desde então.
             </p>
         </section>
 
@@ -303,16 +364,25 @@
                 Sobrescrever um Histórico no GitHub
             </h2>
             <p>
-                Para sobrescrever o histórico de commits no GitHub, você pode utilizar o comando <code><strong>git push --force</strong></code>. Esse comando força o Git a atualizar o repositório remoto com a versão atual do seu repositório local, mesmo que o histórico de commits seja diferente. Isso pode ser útil em situações em que você alterou o histórico localmente e precisa refletir essas mudanças no repositório remoto.
+                Para sobrescrever o histórico de commits no GitHub, você pode utilizar o comando
+                <code><strong>git push --force</strong></code>. Esse comando força o Git a atualizar o repositório
+                remoto com a versão atual do seu repositório local, mesmo que o histórico de commits seja diferente.
+                Isso pode ser útil em situações em que você alterou o histórico localmente e precisa refletir essas
+                mudanças no repositório remoto.
             </p>
             <p>
-                No entanto, é importante usar <strong>cautela</strong> ao utilizar o <code>git push --force</code>, pois ele pode sobrescrever o trabalho de outros colaboradores, eliminando commits que já foram enviados ao repositório remoto. 
+                No entanto, é importante usar <strong>cautela</strong> ao utilizar o <code>git push --force</code>, pois
+                ele pode sobrescrever o trabalho de outros colaboradores, eliminando commits que já foram enviados ao
+                repositório remoto.
                 <br><br>
-                Por exemplo, ao usar <code>git reset --hard</code> em um commit anterior para modificar a linha do tempo do projeto e depois forçar o push com <code>git push --force</code>, você estará reescrevendo o histórico remoto com as alterações do seu repositório local.
+                Por exemplo, ao usar <code>git reset --hard</code> em um commit anterior para modificar a linha do tempo
+                do projeto e depois forçar o push com <code>git push --force</code>, você estará reescrevendo o
+                histórico remoto com as alterações do seu repositório local.
             </p>
             <h3>Exemplo Prático</h3>
             <p>
-                Suponha que você tenha feito commits que deseja remover do histórico. Você pode voltar ao estado de um commit específico com:
+                Suponha que você tenha feito commits que deseja remover do histórico. Você pode voltar ao estado de um
+                commit específico com:
                 <br><code><strong>git reset --hard [commit]</strong></code>
                 <br>Em seguida, use:
                 <br><code><strong>git push --force</strong></code>
@@ -322,14 +392,20 @@
 
         <section>
             <h2>
-                O comando git push -f 
+                O comando git push -f
             </h2>
             <p>
-                O comando é utilizado para forçar o envio de commits do repositório local para o repositório remoto, mesmo que isso envolva sobrescrever o histórico remoto existente. Esse comando é geralmente usado em situações onde o histórico local foi modificado, como após um git reset --hard, ou outras operações que reescrevem o histórico de commits.
+                O comando é utilizado para forçar o envio de commits do repositório local para o repositório remoto,
+                mesmo que isso envolva sobrescrever o histórico remoto existente. Esse comando é geralmente usado em
+                situações onde o histórico local foi modificado, como após um git reset --hard, ou outras operações que
+                reescrevem o histórico de commits.
             </p>
             <p>
-               <strong>Como usar:</strong> Quando você usa git push -f, o Git não apenas adiciona novos commits ao repositório remoto, mas também reescreve o histórico, eliminando commits no repositório remoto que não estão mais presentes no seu repositório local. <br>
-Isso pode ser útil para corrigir um erro cometido em commits anteriores ou para manter o histórico de commits limpo e organizado.
+                <strong>Como usar:</strong> Quando você usa git push -f, o Git não apenas adiciona novos commits ao
+                repositório remoto, mas também reescreve o histórico, eliminando commits no repositório remoto que não
+                estão mais presentes no seu repositório local. <br>
+                Isso pode ser útil para corrigir um erro cometido em commits anteriores ou para manter o histórico de
+                commits limpo e organizado.
             </p>
         </section>
 
@@ -338,32 +414,40 @@ Isso pode ser útil para corrigir um erro cometido em commits anteriores ou para
                 Apontar o Projeto para Outro Repositório Remoto
             </h2>
             <p>
-                Às vezes, pode ser necessário mudar o repositório remoto para o qual o seu projeto Git está apontando. Isso pode acontecer se você tiver mudado o repositório no GitHub, ou se estiver movendo o projeto para um novo servidor. Para isso, o comando <code>git remote set-url</code> é utilizado.
+                Às vezes, pode ser necessário mudar o repositório remoto para o qual o seu projeto Git está apontando.
+                Isso pode acontecer se você tiver mudado o repositório no GitHub, ou se estiver movendo o projeto para
+                um novo servidor. Para isso, o comando <code>git remote set-url</code> é utilizado.
             </p>
             <h3>Entendendo o Comando <code>git remote set-url</code></h3>
             <p>
-                O comando <code>git remote set-url</code> permite que você altere o URL de um repositório remoto associado ao seu projeto. Em outras palavras, ele aponta o repositório local para um novo repositório remoto, mantendo o nome do remoto (como <code>origin</code>), mas mudando o destino.
+                O comando <code>git remote set-url</code> permite que você altere o URL de um repositório remoto
+                associado ao seu projeto. Em outras palavras, ele aponta o repositório local para um novo repositório
+                remoto, mantendo o nome do remoto (como <code>origin</code>), mas mudando o destino.
             </p>
-        
+
             <h3>Como Usar:</h3>
             <p>
                 Para apontar o projeto para um novo repositório remoto, você pode usar o seguinte comando:
             </p>
             <pre><code>git remote set-url origin NOVO_URL</code></pre>
             <p>
-                Aqui, <code>origin</code> é o nome padrão do repositório remoto, e <code>NOVO_URL</code> é o novo URL do repositório para o qual você deseja apontar o seu projeto. Por exemplo, se você mudou o repositório para um novo endereço no GitHub, o comando poderia ser:
+                Aqui, <code>origin</code> é o nome padrão do repositório remoto, e <code>NOVO_URL</code> é o novo URL do
+                repositório para o qual você deseja apontar o seu projeto. Por exemplo, se você mudou o repositório para
+                um novo endereço no GitHub, o comando poderia ser:
             </p>
             <pre><code>git remote set-url origin https://github.com/usuario/novo-repositorio.git</code></pre>
-            
+
             <h3>Verificando a Alteração</h3>
             <p>
-                Após alterar o URL do remoto, é uma boa prática verificar se a mudança foi aplicada corretamente. Para isso, você pode usar o comando:
+                Após alterar o URL do remoto, é uma boa prática verificar se a mudança foi aplicada corretamente. Para
+                isso, você pode usar o comando:
             </p>
             <pre><code>git remote -v</code></pre>
             <p>
-                Este comando exibirá a lista de URLs associadas ao seu repositório, permitindo que você confirme que o repositório está apontando para o local correto.
+                Este comando exibirá a lista de URLs associadas ao seu repositório, permitindo que você confirme que o
+                repositório está apontando para o local correto.
             </p>
-            
+
             <h3>Quando Usar</h3>
             <p>
                 Esse comando é útil em diversas situações, como:
@@ -373,12 +457,13 @@ Isso pode ser útil para corrigir um erro cometido em commits anteriores ou para
                 <li>Se você clonou o projeto de outro lugar e deseja vinculá-lo ao seu próprio repositório.</li>
                 <li>Se a URL do servidor Git foi alterada.</li>
             </ul>
-        
+
             <p>
-                Ao usar <code>git remote set-url</code>, você mantém todas as suas referências e histórico de commits, mas agora eles serão enviados para o novo repositório remoto.
+                Ao usar <code>git remote set-url</code>, você mantém todas as suas referências e histórico de commits,
+                mas agora eles serão enviados para o novo repositório remoto.
             </p>
         </section>
-        
+
     </div>
 </body>
 
