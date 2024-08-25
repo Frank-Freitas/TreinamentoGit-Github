@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal de Git Checkout</title>
+    <title>Git Checkout</title>
 </head>
 
 <body>
     <header>
         <h1>
-            git Checkout
+            Git Checkout
         </h1>
     </header>
 
@@ -22,39 +22,38 @@
         <div>
             <!-- Botão para fechar o modal -->
             <button id="closeModalBtn">Fechar</button>
-            <h3>git checkout entre commits</h3>
+            <h3>Git Checkout entre Commits</h3>
             <p>
-                O git checkout pode ser combinado com o HEAD para navegar entre commits, o comando
-                git checkout HEAD coloca voce no commit mais recente do brancj atual, não ha mudanças percepitivas se
-                voce ja estiver no estado mais recente, mas pode ser util se voce tiver feito alteraçoes não commitadas
-                e quiser restaurar o diretorio de trabalho ao ultimo commmit.
+                O comando <code>git checkout</code> pode ser usado para navegar entre commits. 
+                Quando você usa <code>git checkout HEAD</code>, você volta para o commit mais recente da branch atual. 
+                Não há mudanças visíveis se você já estiver no estado mais recente, mas pode ser útil se você tiver feito alterações não commitadas e quiser restaurar o diretório de trabalho ao último commit.
             </p>
 
             <h3>
                 Voltar para um Commit Anterior Relativo:
             </h3>
             <p>
-                Com o comando <strong>git checkout HEAD~N </strong>, você retorna ao estado do repositório de N commits
-                atrás, onde N é o número de commits que você deseja voltar. <br>
-                <strong>git checkout HEAD~1</strong> Volta um commit atrás. <br>
-                <strong>git checkout HEAD~2</strong> Volta dois commits atrás, e assim por diante.
+                Com o comando <strong>git checkout HEAD~N</strong>, você retorna ao estado do repositório de N commits atrás, onde N é o número de commits que você deseja voltar. 
+                <br>
+                <strong>git checkout HEAD~1</strong> volta um commit atrás. 
+                <br>
+                <strong>git checkout HEAD~2</strong> volta dois commits atrás, e assim por diante.
             </p>
 
             <h3>
-                checkout para um commit especifico
+                Checkout para um Commit Específico
             </h3>
             <p>
-                Se colocarmos git checkout "Codigo especifico de um commit" voltaremos exatamente para esse commit.
-                <strong>Por ecxemplo </strong>: git checkout 6dcb09bcca3eabcd123456789abcde123456789a
+                Para voltar a um commit específico, use o código do commit com <code>git checkout</code>. 
+                <br>
+                <strong>Por exemplo:</strong> <code>git checkout 6dcb09bcca3eabcd123456789abcde123456789a</code>
             </p>
-
         </div>
     </div>
 
-
-    <header>
-        <p><a href="index.html">Voltar para pagina principal</a></p>
-    </header>
+    <footer>
+        <p><a href="index.html">Voltar para a página principal</a></p>
+    </footer>
 
     <script>
         // Obtém o modal
@@ -76,7 +75,6 @@
             modal.style.display = "none";
         }
     </script>
-
 </body>
 
 </html>

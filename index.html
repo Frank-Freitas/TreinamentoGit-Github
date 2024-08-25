@@ -1,57 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>testando git e gihub</title>
+    <title>Testando Git e GitHub</title>
 </head>
 
 <body>
-    <Header>
+    <header>
         <h1>
-            Aprendendo a usar o Git bash
+            Aprendendo a usar o Git Bash
         </h1>
-    </Header>
+    </header>
 
     <div>
         <section>
             <h2>
-                Conectando respositório local com o remoto.
+                Conectando o repositório local com o remoto
             </h2>
 
             <h3>
-                gerar uma nova ssh
+                Gerar uma nova chave SSH
             </h3>
             <p>
-                <!-- criar algo aqui depois -->
+                <!-- Criar algo aqui depois -->
             </p>
 
             <h2>
-                salvar primeria versão de um projeto.
+                Salvar a primeira versão de um projeto
             </h2>
             <p>
-                entrar no repoistorio do github , pegar chave ssh do repositório.
-                Apos isto, entrar no git bash dentro da pasta de seu projeto e, usar o comando
-                <strong>git remote add origin</strong> e em siguida o link do seu reposiório do projeto no github.
-                ficando assim: git remote add origin git@github.com:seuusuario/seurepositorio.git
-
+                Entre no repositório do GitHub e pegue a chave SSH do repositório.
+                Em seguida, abra o Git Bash na pasta do seu projeto e use o comando
+                <strong>git remote add origin</strong>, seguido do link do seu repositório no GitHub.
+                O comando ficará assim: <code>git remote add origin git@github.com:seuusuario/seurepositorio.git</code>
             </p>
         </section>
 
         <section>
-
             <h2>
-                Comandos no git bash
+                Comandos no Git Bash
             </h2>
 
             <h3>
-                branch
+                Branch
             </h3>
             <p>
                 Uma branch é como uma linha do tempo paralela do seu projeto. Quando você cria uma branch, está criando
                 uma nova linha de desenvolvimento que começa a partir de um ponto específico na história do projeto, mas
-                que pode seguir seu próprio caminho de forma independente da linha principal, sem alterar a mesma.
+                pode seguir seu próprio caminho de forma independente da linha principal, sem alterar a principal.
             </p>
 
             <h3>
@@ -62,55 +60,54 @@
             </p>
 
             <h3>
-                ls -1
+                ls -l
             </h3>
             <p>
-                Mostra uma lista detalhada com mais informações.
+                Mostra uma lista detalhada com mais informações sobre os arquivos e diretórios.
             </p>
 
             <h3>
                 ls -a
             </h3>
             <p>
-                Lista todos os arquivos incluindo arquivos ocultos.
+                Lista todos os arquivos, incluindo arquivos ocultos.
             </p>
 
             <h3>
-                ls -1a
+                ls -la
             </h3>
             <p>
-                Combina os dois comandos -1 e -a mostrando uma lista
-                detallhada com todos os arquivos ocultos.
+                Combina as opções -l e -a, mostrando uma lista detalhada com todos os arquivos, incluindo os ocultos.
             </p>
 
             <h3>
                 git init
             </h3>
             <p>
-                Inicializa um novo repositório dentro do diretório em que você deu o
-                comando, significa que foi criado uma pasta va oculta e vazia ".git".
+                Inicializa um novo repositório no diretório atual. Isso cria uma pasta oculta chamada ".git".
             </p>
 
             <h3>
                 git status
             </h3>
             <p>
-                Mostrar informações importantes do que esta acontecendo em seu repositório do git.
+                Mostra informações sobre o estado atual do seu repositório Git.
             </p>
 
             <h3>
-                git add.
+                git add .
             </h3>
             <p>
-                Adicionar mudanças nos arquivos na area de preparação. Significa que estamos dizendo ao git que
-                desejamos incluir essas novas alterações no proximo commit.
+                Adiciona todas as mudanças na área de preparação (staging area). Isso indica ao Git que você deseja
+                incluir
+                essas alterações no próximo commit.
             </p>
 
             <h3>
-                git add algo especifico
+                git add <em>algo específico</em>
             </h3>
             <p>
-                usando o git add para mandar apenas uma parte de todas as modificações que foram feitas
+                Usa o comando git add para adicionar apenas uma parte das modificações feitas.
                 <br>
                 <a href="paginaDois.html">Ver mais</a>
             </p>
@@ -119,45 +116,42 @@
                 git commit -m
             </h3>
             <p>
-                É utilizado para salvar as atualizações que você adicionou ao repositório com o comando git add. E ao
-                usar git commit -m "nome da atualização", você fornece uma descrição para essas atualizações(um nome),
-                que será registrada no histórico da branch. A branch representa a linha do tempo do projeto,mostrando
-                todos os passos da vida da quele projeto.
+                Salva as atualizações adicionadas ao repositório com o comando git add. Ao usar
+                <code>git commit -m "mensagem"</code>, você fornece uma descrição para essas atualizações, que será
+                registrada no histórico da branch. A branch representa a linha do tempo do projeto, mostrando todos os
+                passos do projeto.
             </p>
 
             <h3>
                 git branch -M main
             </h3>
             <p>
-                Renomear uma branch para o nome main. o M significa renomar/ alterar o nome. Se uma branch com o nome de
-                destino (neste caso, main) já existir, o -M força a substituição dessa branch existente. Isso é útil se
-                você deseja garantir que a branch seja renomeada independentemente de qualquer conflito de nomes.
+                Renomeia a branch atual para "main". O <code>-M</code> força a substituição de uma branch existente com
+                o mesmo nome, se houver. Isso é útil para garantir que a branch seja renomeada, independentemente de
+                conflitos de nomes.
             </p>
 
             <h3>
                 git push
             </h3>
             <p>
-                É usado para enviar as alterações locais feitas no seu repositório Git para um repositório remoto
-                (github). Quando você faz um git push, você está atualizando o repositório remoto com os commits que
-                você fez localmente.
-
-                
+                Envia as alterações locais feitas no seu repositório Git para um repositório remoto (como o GitHub). Com
+                <code>git push</code>, você atualiza o repositório remoto com os commits que fez localmente.
             </p>
-            
 
             <h3>
                 code .
             </h3>
             <p>
-                Abrir o VS Code pelo promp do git bash, desta forma o vs code abrira na pasta em que voce estiver dando o comando code . dentro do git bash
+                Abre o VS Code a partir do Git Bash, na pasta em que você está quando executa o comando
+                <code>code .</code>
             </p>
 
             <h3>
                 git log
             </h3>
             <p>
-                Exibe o histórico de commits do repositório Git. Ele mostra uma lista de commits recentes, detalhando
+                Exibe o histórico de commits do repositório Git, mostrando uma lista de commits recentes e detalhando
                 informações sobre cada um.
             </p>
 
@@ -165,62 +159,132 @@
                 git log --oneline
             </h3>
             <p>
-                Mostrar o histórico de versões de modo simplificado, com apenas o inicio do codigo e o nome do commit.
+                Mostra o histórico de commits de forma simplificada, com apenas o início do código e a mensagem do
+                commit.
             </p>
 
             <h3>
                 git reset
             </h3>
             <p>
-                Depois de ter dado um git add . e usar um git reset, remove todos os arquivos que foram colocados na
-                area de staged,, com o git add .
-                Tambem existe outras maneiras de implementar mais coisas no git reset
+                Após usar <code>git add .</code>, o comando <code>git reset</code> remove todos os arquivos da área de
+                preparação (staging area). Existem outras maneiras de usar o <code>git reset</code> para diferentes
+                fins.
             </p>
 
             <h3>
                 git diff
             </h3>
             <p>
-                O git diff mostra a diferença entre a versão modificada e a anterior de um codigo especifico quando voce
-                colocar no git bash "git diff nome-do-arquivo.html".
+                Mostra a diferença entre a versão modificada e a versão anterior de um arquivo específico. Use
+                <code>git diff nome-do-arquivo.html</code> para ver as alterações.
             </p>
 
             <h3>
                 git checkout
             </h3>
             <p>
-                O comando git checkout pode ser usado para varias operações, como mudar de brabch, restauraar arquivos
-                espécificos e navegar entre os commits.
+                O comando <code>git checkout</code> pode ser usado para várias operações, como mudar de branch,
+                restaurar arquivos específicos e navegar entre commits.
+                <br>
+                <a href="checkout.html">Ver mais sobre git checkout</a>
+            </p>
+        </section>
 
-                <a href="checkout.html">Ver mais sobre checkout</a>
+        <section>
+            <h2>
+                Deletar o último commit sem remover as modificações nos arquivos
+            </h2>
+            <p>
+                <u>Sempre use <code>git status</code> para verificar o estado atual.</u><br>
+                <strong>Localmente:</strong> O comando <code>git reset --soft HEAD~1</code> move o ponteiro HEAD para o
+                commit anterior (<code>HEAD~1</code>). O commit mais recente é "desfeito" localmente e suas mudanças são
+                colocadas na área de preparação. No histórico local, <code>HEAD~1</code> se torna o novo
+                <code>HEAD</code>, e o commit que era <code>HEAD</code> ainda existe, mas suas alterações estão prontas
+                para serem re-commitadas, modificadas ou removidas.
             </p>
 
+            <h4>
+                No Repositório Remoto:
+            </h4>
+            <strong>Nada muda imediatamente:</strong> O repositório remoto ainda tem <code>HEAD</code> e
+            <code>HEAD~1</code> como estavam antes do reset local. O commit que você "desfez" localmente ainda está lá
+            como o commit mais recente no remoto.
+            <br>
+            Após usar <code>git push --force</code> (se você decidir fazer isso):
+            Se você executar <code>git push --force</code> após o <code>git reset --soft HEAD~1</code>, você estará
+            sobrescrevendo o histórico remoto com o histórico local atualizado.
+            <br>
+            <strong>Resultado no remoto:</strong> O commit que era <code>HEAD~1</code> se tornará o novo
+            <code>HEAD</code> no remoto, e o commit original de <code>HEAD</code> será removido do histórico remoto (ele
+            será perdido, a menos que esteja referenciado em outro lugar).
+            <br>
+        </section>
+
+        <section>
+            <h2>
+                git pull
+            </h2>
+            <p>
+                O comando <code>git pull</code> é essencial para manter seu repositório local atualizado com as mudanças
+                feitas no repositório remoto. Ele busca e mescla as mudanças de um branch específico do repositório
+                remoto para o branch local atual.
+            </p>
+            <h4>
+                O que pode acontecer:
+            </h4>
+            <strong>Mesclagem automática:</strong> Se não houver conflitos entre as mudanças locais e as mudanças no
+            remoto, a mesclagem é feita automaticamente e as alterações são aplicadas no seu branch local.
+            <br>
+            <strong>Conflitos:</strong> Se houver conflitos entre as mudanças locais e as mudanças do remoto, o Git irá
+            parar e solicitar que você resolva os conflitos manualmente antes de concluir a mesclagem.
+            <br>
+            <strong>Atualizações de branch:</strong> Se o branch remoto tiver novos commits que não estão no branch
+            local, <code>git pull</code> aplicará esses commits ao seu branch local.
+            <br>
+        </section>
+
+        <section>
+            <h2>
+                Resolver push rejeitado por histórico.
+            </h2>
+            <p>
+                Se o repositório local estiver atrasado em relação ao remoto, o <code>git push</code> normalmente falhará. Isso acontece porque o Git detecta que o repositório remoto tem commits que não estão no seu repositório local. O Git faz isso para evitar sobrescrever mudanças feitas por outras pessoas.
+            </p>
+            <p>
+                Para resolver esse problema, você deve primeiro atualizar seu repositório local com as alterações do remoto usando <code><strong>git pull</strong></code>. Isso trará os commits do remoto para o seu repositório local. Se o comando <code>git pull</code> for executado com sucesso e não houver conflitos, você poderá fazer o <code>git push</code> normalmente.
+            </p>
+            <p>
+                Se houver conflitos durante o <code>git pull</code>, você precisará resolvê-los antes de conseguir fazer o <code>git push</code>.
+            </p>
+            <p>
+                Após o <code>git pull</code>, se for necessário fazer um merge, o editor padrão (como o <strong>VIM</strong>) pode abrir para você inserir uma mensagem de commit para o merge. Aqui está como você pode usar o VIM:
+            </p>
+            <h3>Como usar o VIM para inserir uma mensagem de commit:</h3>
+            <ol>
+                <li>
+                    Quando o VIM abrir, você estará no modo de comando. Para começar a editar, pressione <code>i</code> para entrar no modo de inserção.
+                </li>
+                <li>
+                    Digite a mensagem de commit. Normalmente, o Git já sugere uma mensagem de commit para merges.
+                </li>
+                <li>
+                    Após inserir sua mensagem, pressione <code>Esc</code> para voltar ao modo de comando.
+                </li>
+                <li>
+                    Para salvar e sair, digite <code>:wq</code> e pressione <code>Enter</code>. Isso escreve a mensagem e sai do VIM.
+                </li>
+                <li>
+                    Se você quiser sair sem salvar, pressione <code>:q!</code> e depois <code>Enter</code>.
+                </li>
+            </ol>
+            <p>
+                Com a mensagem de commit salva, o Git continuará o processo de merge e você poderá fazer o <code>git push</code> para atualizar o repositório remoto com suas mudanças.
+            </p>
+        </section>
+        
+
     </div>
-
-    <h3>
-        Deletando Ultimo commit sem deletar modificações nos arquivos.
-    </h3>
-    <p>
-        <u>Sempre usando o git status para ver o status atual.</u><br>
-       <strong>Localmente:</strong>
-O comando git reset --soft HEAD~1 move o ponteiro HEAD para HEAD~1, ou seja, o penúltimo commit agora se torna o commit "atual" no seu repositório local.
-O commit que era o HEAD mais recente é "desfeito" localmente e suas mudanças são colocadas na área de stage.
-No histórico local: Agora, HEAD~1 se torna HEAD, e o commit que era HEAD ainda existe, mas suas alterações estão prontas para serem re-commitadas, modificadas ou removidas.
-
-<h4>
-    No Repositório Remoto:
-</h4>
-<strong>Nada muda imediatamente:</strong> O repositório remoto ainda tem HEAD e HEAD~1 como estavam antes do reset local. O commit que você "desfez" localmente ainda está lá como o commit mais recente no remoto.
-Após git push --force (se você fizer isso):
-Se você decidir executar git push --force após o git reset --soft HEAD~1, você estará sobrescrevendo o histórico no remoto com o histórico local atualizado.
-
-<strong>Resultado no remoto:</strong> O commit que era o HEAD~1 agora se tornará o HEAD no remoto, e o commit original do HEAD será removido do histórico remoto (ele será perdido, a menos que esteja referenciado em outro lugar).
-
-
-    </p>
-
-    </section>
-
 </body>
 
 </html>
